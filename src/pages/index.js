@@ -1,21 +1,77 @@
 import React from "react"
-import { Link } from "gatsby"
+import { css } from "@emotion/core"
 
-import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <h1
+      css={css`
+        text-align: center;
+        margin-top: 16px;
+        margin-bottom: 0;
+      `}
+    >
+      Max Emerson
+    </h1>
+    <div
+      css={css`
+        text-align: center;
+        font-size: 12px;
+        margin-bottom: 12px;
+      `}
+    >
+      Writer, director, internet person
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+
+    <div style={{ marginBottom: `1.45rem` }}>
+      <Image query={maxColorImageQuery} />
+    </div>
+    <nav css={bottomNav}></nav>
+    <section
+      css={css`
+        padding: 0 8px;
+      `}
+    >
+      <h1
+        css={css`
+          margin-bottom: 8px;
+        `}
+      >
+        Director
+      </h1>
+      <p
+        css={css`
+          font-size: 14px;
+        `}
+      >
+        Max directed his first debut film Hooked in 2016. Dorem ipsom dolor.
+      </p>
+    </section>
+  </>
 )
+
+const bottomNav = css`
+  height: 50px;
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+`
+
+const maxColorImageQuery = graphql`
+  query {
+    placeholderImage: file(relativePath: { eq: "max-color.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
