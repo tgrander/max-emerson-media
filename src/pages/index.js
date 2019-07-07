@@ -1,6 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 
+import MobileBottomNav from '../components/mobile-bottom-nav'
 import Image from "../components/image"
 import SEO from "../components/seo"
 
@@ -29,7 +30,6 @@ const IndexPage = () => (
     <div style={{ marginBottom: `1.45rem` }}>
       <Image query={maxColorImageQuery} />
     </div>
-    <nav css={bottomNav}></nav>
     <section
       css={css`
         padding: 0 8px;
@@ -50,17 +50,9 @@ const IndexPage = () => (
         Max directed his first debut film Hooked in 2016. Dorem ipsom dolor.
       </p>
     </section>
+    <MobileBottomNav/>
   </>
 )
-
-const bottomNav = css`
-  height: 50px;
-  background-color: #333;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-`
 
 const maxColorImageQuery = graphql`
   query {
