@@ -1,8 +1,8 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-import MobileBottomNav from "../components/mobile-bottom-nav"
-import DesktopSideNav from "../components/desktop-side-nav"
+import MobileBottomNav from "../components/mobile-nav"
+import DesktopSideNav from "../components/desktop-nav"
 
 import SEO from "../components/seo"
 import Content from "../components/content"
@@ -15,6 +15,9 @@ const IndexPage = () => (
         display: flex;
         flex-wrap: nowrap;
         height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 30px;
       `}
     >
       <DesktopSideNav />

@@ -1,14 +1,16 @@
 import React from "react"
 import { css } from "@emotion/core"
 
+export const desktopNavWidth = 200
+
 const DesktopSideNav = () => {
   return (
     <nav
       css={css`
+        position: fixed;
         height: 100%;
-        width: 200px;
+        width: ${desktopNavWidth}px;
         background-color: #fff;
-        margin-left: 30px;
         margin-right: 55px;
         @media only screen and (max-width: 768px) {
           display: none;
@@ -44,13 +46,18 @@ const DesktopSideNav = () => {
           }
         `}
       >
-        <a>Director</a>
-        <a>Writer</a>
-        <a>Personality</a>
-        <a>Press</a>
+        <a css={linkCss}>Director</a>
+        <a css={linkCss}>Writer</a>
+        <a css={linkCss}>Personality</a>
+        <a css={linkCss}>Press</a>
       </section>
     </nav>
   )
 }
+
+const linkCss = css`
+  font-size: 24px;
+  cursor: pointer;
+`
 
 export default DesktopSideNav
