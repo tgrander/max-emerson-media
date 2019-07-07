@@ -2,6 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 
 import Image from "../components/image"
+import MobileHeader from "./content/mobile-header"
 
 const Content = () => {
   return (
@@ -10,35 +11,9 @@ const Content = () => {
         flex: 1;
       `}
     >
-      <div
-        css={css`
-          @media only screen and (min-width: 768px) {
-            display: none;
-          }
-        `}
-      >
-        <h1
-          css={css`
-            text-align: center;
-            margin-top: 16px;
-            margin-bottom: 0;
-          `}
-        >
-          Max Emerson
-        </h1>
-        <div
-          css={css`
-            text-align: center;
-            font-size: 12px;
-            margin-bottom: 12px;
-          `}
-        >
-          Writer, director, internet person
-        </div>
-      </div>
-
+      <MobileHeader />
       <div style={{ marginBottom: `1.45rem` }}>
-        <Image query={maxColorImageQuery} />
+        <Image query={maxImageQuery} />
       </div>
       <section
         css={css`
@@ -64,9 +39,9 @@ const Content = () => {
   )
 }
 
-const maxColorImageQuery = graphql`
+const maxImageQuery = graphql`
   query {
-    placeholderImage: file(relativePath: { eq: "max-color.jpg" }) {
+    placeholderImage: file(relativePath: { eq: "max-white.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
