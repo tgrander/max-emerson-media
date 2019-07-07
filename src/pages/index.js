@@ -1,69 +1,27 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-import MobileBottomNav from '../components/mobile-bottom-nav'
-import Image from "../components/image"
+import MobileBottomNav from "../components/mobile-bottom-nav"
+import DesktopSideNav from "../components/desktop-side-nav"
+
 import SEO from "../components/seo"
+import Content from "../components/content"
 
 const IndexPage = () => (
   <>
     <SEO title="Home" />
-    <h1
-      css={css`
-        text-align: center;
-        margin-top: 16px;
-        margin-bottom: 0;
-      `}
-    >
-      Max Emerson
-    </h1>
     <div
       css={css`
-        text-align: center;
-        font-size: 12px;
-        margin-bottom: 12px;
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100%;
       `}
     >
-      Writer, director, internet person
+      <DesktopSideNav />
+      <Content />
     </div>
-
-    <div style={{ marginBottom: `1.45rem` }}>
-      <Image query={maxColorImageQuery} />
-    </div>
-    <section
-      css={css`
-        padding: 0 8px;
-      `}
-    >
-      <h1
-        css={css`
-          margin-bottom: 8px;
-        `}
-      >
-        Director
-      </h1>
-      <p
-        css={css`
-          font-size: 14px;
-        `}
-      >
-        Max directed his first debut film Hooked in 2016. Dorem ipsom dolor.
-      </p>
-    </section>
-    <MobileBottomNav/>
+    <MobileBottomNav />
   </>
 )
-
-const maxColorImageQuery = graphql`
-  query {
-    placeholderImage: file(relativePath: { eq: "max-color.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage
