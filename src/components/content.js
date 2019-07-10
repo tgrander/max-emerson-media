@@ -21,7 +21,7 @@ const Content = () => {
       <div style={{ marginBottom: `1.45rem` }}>
         <Image query={maxImageQuery} />
       </div>
-      <section css={css``}>
+      <section id="director" css={css``}>
         <h1
           css={css`
             padding: 0;
@@ -45,7 +45,7 @@ const Content = () => {
           videoTitle="Max Emerson director reel"
         />
       </section>
-      <section css={css``}>
+      <section id="writer" css={css``}>
         <h1
           css={css`
             padding: 0;
@@ -65,7 +65,7 @@ const Content = () => {
           videoTitle="Max Emerson director reel"
         />
       </section>
-      <section css={css``}>
+      <section id="personality" css={css``}>
         <h1
           css={css`
             padding: 0;
@@ -89,7 +89,7 @@ const Content = () => {
           videoTitle="Max Emerson director reel"
         />
       </section>
-      <section css={css``}>
+      <section id="press" css={css``}>
         <h1
           css={css`
             padding: 0;

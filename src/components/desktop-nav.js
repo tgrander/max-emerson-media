@@ -46,10 +46,18 @@ const DesktopSideNav = () => {
           }
         `}
       >
-        <a css={linkCss}>Director</a>
-        <a css={linkCss}>Writer</a>
-        <a css={linkCss}>Personality</a>
-        <a css={linkCss}>Press</a>
+        <a href="#director" css={linkCss}>
+          Director
+        </a>
+        <a href="#writer" css={linkCss}>
+          Writer
+        </a>
+        <a href="#personality" css={linkCss}>
+          Personality
+        </a>
+        <a href="#press" css={linkCss}>
+          Press
+        </a>
       </section>
     </nav>
   )
@@ -58,6 +66,8 @@ const DesktopSideNav = () => {
 const linkCss = css`
   font-size: 24px;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 `
 
 export default DesktopSideNav
