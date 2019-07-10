@@ -46,16 +46,16 @@ const DesktopSideNav = () => {
           }
         `}
       >
-        <a href="#director" css={linkCss}>
+        <a href="#director" css={linkStyles}>
           Director
         </a>
-        <a href="#writer" css={linkCss}>
+        <a href="#writer" css={linkStyles}>
           Writer
         </a>
-        <a href="#personality" css={linkCss}>
+        <a href="#personality" css={linkStyles}>
           Personality
         </a>
-        <a href="#press" css={linkCss}>
+        <a href="#press" css={linkStyles}>
           Press
         </a>
       </section>
@@ -63,7 +63,7 @@ const DesktopSideNav = () => {
   )
 }
 
-const linkCss = css`
+const linkStyles = css`
   font-size: 24px;
   cursor: pointer;
   text-decoration: none;

@@ -1,6 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 
+import Layout from "../components/layout"
 import MobileBottomNav from "../components/mobile-nav"
 import DesktopSideNav from "../components/desktop-nav"
 
@@ -8,7 +9,7 @@ import SEO from "../components/seo"
 import Content from "../components/content"
 
 const IndexPage = () => (
-  <>
+  <Layout>
     <SEO title="Home" />
     <div
       css={css`
@@ -24,7 +25,7 @@ const IndexPage = () => (
       <Content />
     </div>
     <MobileBottomNav />
-  </>
+  </Layout>
 )
 
 export default IndexPage
