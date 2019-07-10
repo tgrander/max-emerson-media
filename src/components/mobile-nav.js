@@ -21,7 +21,7 @@ const MobileBottomNav = () => {
     >
       <Scrollspy
         componentTag="nav"
-        items={["director", "writer", "personality", "press"]}
+        items={["above-the-fold", "director", "writer", "personality", "press"]}
         currentClassName="is-current-section"
         css={css`
           background-color: black;
@@ -39,6 +39,12 @@ const MobileBottomNav = () => {
           }
         `}
       >
+        <a
+          href="#above-the-fold"
+          css={css`
+            display: none;
+          `}
+        ></a>
         <a href="#director">Director</a>
         <a href="#writer">Writer</a>
         <a href="#personality">Personality</a>

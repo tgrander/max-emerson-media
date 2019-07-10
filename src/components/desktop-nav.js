@@ -38,37 +38,38 @@ const DesktopSideNav = () => {
         Writer, director, internet person
       </div>
       <Scrollspy
-        items={["director", "writer", "personality", "press"]}
+        componentTag="nav"
+        items={["above-the-fold", "director", "writer", "personality", "press"]}
         currentClassName="is-current-section"
         css={css`
+          display: flex;
+          flex-direction: column;
           text-align: right;
           list-style: none;
           & > :not(:last-child) {
             margin-bottom: 60px;
           }
-          li a {
+          a {
             color: black;
             font-size: 24px;
             cursor: pointer;
             text-decoration: none;
           }
-          li.is-current-section a {
+          a.is-current-section {
             color: red;
           }
         `}
       >
-        <li>
-          <a href="#director">Director</a>
-        </li>
-        <li>
-          <a href="#writer">Writer</a>
-        </li>
-        <li>
-          <a href="#personality">Personality</a>
-        </li>
-        <li>
-          <a href="#press">Press</a>
-        </li>
+        <a
+          href="#above-the-fold"
+          css={css`
+            display: none;
+          `}
+        ></a>
+        <a href="#director">Director</a>
+        <a href="#writer">Writer</a>
+        <a href="#personality">Personality</a>
+        <a href="#press">Press</a>
       </Scrollspy>
     </nav>
   )
