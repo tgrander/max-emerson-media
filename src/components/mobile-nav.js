@@ -4,10 +4,18 @@ import { css } from "@emotion/core"
 const MobileBottomNav = () => {
   return (
     <nav css={navStyles}>
-      <a css={linkStyles}>Director</a>
-      <a css={linkStyles}>Writer</a>
-      <a css={linkStyles}>Personality</a>
-      <a css={linkStyles}>Press</a>
+      <a href="#director" css={linkStyles}>
+        Director
+      </a>
+      <a href="#writer" css={linkStyles}>
+        Writer
+      </a>
+      <a href="#personality" css={linkStyles}>
+        Personality
+      </a>
+      <a href="#press" css={linkStyles}>
+        Press
+      </a>
     </nav>
   )
 }
