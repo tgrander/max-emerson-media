@@ -6,6 +6,7 @@ import MobileHeader from "./content/mobile-header"
 import Video from "./video"
 
 import { desktopNavWidth } from "./desktop-nav"
+import { navHeight, navBottomSpacingHeight } from "./mobile-nav"
 
 const Content = () => {
   return (
@@ -14,6 +15,9 @@ const Content = () => {
         flex: 1;
         @media only screen and (min-width: 768px) {
           margin-left: ${desktopNavWidth + 55}px;
+        }
+        @media only screen and (max-width: 768px) {
+          margin-bottom: ${navHeight + navBottomSpacingHeight}px;
         }
       `}
     >

@@ -1,6 +1,9 @@
 import React from "react"
 import { css } from "@emotion/core"
 
+export const navHeight = 34
+export const navBottomSpacingHeight = 25
+
 const MobileBottomNav = () => {
   return (
     <div
@@ -18,7 +21,7 @@ const MobileBottomNav = () => {
           display: flex;
           justify-content: space-around;
           align-items: center;
-          height: 34px;
+          height: ${navHeight}px;
           @media only screen and (min-width: 768px) {
             display: none;
           }
@@ -40,7 +43,7 @@ const MobileBottomNav = () => {
       {/* below div used to add extra space to bottom of mobile nav (iPhone X design) */}
       <div
         css={css`
-          height: 25px;
+          height: ${navBottomSpacingHeight}px;
           background-color: black;
         `}
       />
