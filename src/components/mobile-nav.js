@@ -13,6 +13,9 @@ const MobileBottomNav = () => {
         left: 0;
         right: 0;
         width: 100%;
+        @media only screen and (min-width: 768px) {
+          display: none;
+        }
       `}
     >
       <nav
@@ -22,9 +25,6 @@ const MobileBottomNav = () => {
           justify-content: space-around;
           align-items: center;
           height: ${navHeight}px;
-          @media only screen and (min-width: 768px) {
-            display: none;
-          }
         `}
       >
         <a href="#director" css={linkStyles}>
