@@ -18,7 +18,7 @@ const IndexPage = () => (
         height: 100%;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 30px;
+        padding: 0 8px;
       `}
     >
       <DesktopSideNav />

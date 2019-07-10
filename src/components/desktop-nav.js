@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-export const desktopNavWidth = 200
+export const desktopNavWidth = 169
 
 const DesktopSideNav = () => {
   return (

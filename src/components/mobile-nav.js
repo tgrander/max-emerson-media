@@ -3,38 +3,50 @@ import { css } from "@emotion/core"
 
 const MobileBottomNav = () => {
   return (
-    <nav css={navStyles}>
-      <a href="#director" css={linkStyles}>
-        Director
-      </a>
-      <a href="#writer" css={linkStyles}>
-        Writer
-      </a>
-      <a href="#personality" css={linkStyles}>
-        Personality
-      </a>
-      <a href="#press" css={linkStyles}>
-        Press
-      </a>
-    </nav>
+    <div
+      css={css`
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+      `}
+    >
+      <nav
+        css={css`
+          background-color: black;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          height: 34px;
+          @media only screen and (min-width: 768px) {
+            display: none;
+          }
+        `}
+      >
+        <a href="#director" css={linkStyles}>
+          Director
+        </a>
+        <a href="#writer" css={linkStyles}>
+          Writer
+        </a>
+        <a href="#personality" css={linkStyles}>
+          Personality
+        </a>
+        <a href="#press" css={linkStyles}>
+          Press
+        </a>
+      </nav>
+      {/* below div used to add extra space to bottom of mobile nav (iPhone X design) */}
+      <div
+        css={css`
+          height: 25px;
+          background-color: black;
+        `}
+      />
+    </div>
   )
 }
-
-const navStyles = css`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  width: 100%;
-  background-color: black;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  @media only screen and (min-width: 768px) {
-    display: none;
-  }
-`
 
 const linkStyles = css`
   font-size: 11px;
