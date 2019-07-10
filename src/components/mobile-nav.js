@@ -40,6 +40,7 @@ const navStyles = css`
 const linkStyles = css`
   font-size: 11px;
   color: white;
+  text-decoration: none;
 `
 
 export const phonePortrait = "320px"
