@@ -1,5 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
+import Scrollspy from "react-scrollspy"
 
 export const desktopNavWidth = 169
 
@@ -36,38 +37,41 @@ const DesktopSideNav = () => {
       >
         Writer, director, internet person
       </div>
-      <section
+      <Scrollspy
+        items={["director", "writer", "personality", "press"]}
+        currentClassName="is-current-section"
         css={css`
-          display: flex;
-          flex-direction: column;
           text-align: right;
+          list-style: none;
           & > :not(:last-child) {
             margin-bottom: 60px;
           }
+          li a {
+            color: black;
+            font-size: 24px;
+            cursor: pointer;
+            text-decoration: none;
+          }
+          li.is-current-section a {
+            color: red;
+          }
         `}
       >
-        <a href="#director" css={linkStyles}>
-          Director
-        </a>
-        <a href="#writer" css={linkStyles}>
-          Writer
-        </a>
-        <a href="#personality" css={linkStyles}>
-          Personality
-        </a>
-        <a href="#press" css={linkStyles}>
-          Press
-        </a>
-      </section>
+        <li>
+          <a href="#director">Director</a>
+        </li>
+        <li>
+          <a href="#writer">Writer</a>
+        </li>
+        <li>
+          <a href="#personality">Personality</a>
+        </li>
+        <li>
+          <a href="#press">Press</a>
+        </li>
+      </Scrollspy>
     </nav>
   )
 }
-
-const linkStyles = css`
-  font-size: 24px;
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
-`
 
 export default DesktopSideNav
