@@ -31,7 +31,6 @@ const navStyles = css`
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   @media only screen and (min-width: 768px) {
     display: none;
   }

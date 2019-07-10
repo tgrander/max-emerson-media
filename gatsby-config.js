@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: `${__dirname}/src/images/max-profile.jpg`, // This path is relative to the root of the site.
+        logo: `${__dirname}/src/images/max-color.jpg`, // This path is relative to the root of the site.
       },
     },
     {
@@ -34,6 +34,12 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
       },
     },
   ],
