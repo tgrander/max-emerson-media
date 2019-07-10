@@ -1,5 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
+import Scrollspy from "react-scrollspy"
 
 export const navHeight = 34
 export const navBottomSpacingHeight = 25
@@ -18,28 +19,31 @@ const MobileBottomNav = () => {
         }
       `}
     >
-      <nav
+      <Scrollspy
+        componentTag="nav"
+        items={["director", "writer", "personality", "press"]}
+        currentClassName="is-current-section"
         css={css`
           background-color: black;
           display: flex;
           justify-content: space-around;
           align-items: center;
           height: ${navHeight}px;
+          a {
+            font-size: 11px;
+            color: white;
+            text-decoration: none;
+          }
+          a.is-current-section {
+            color: red;
+          }
         `}
       >
-        <a href="#director" css={linkStyles}>
-          Director
-        </a>
-        <a href="#writer" css={linkStyles}>
-          Writer
-        </a>
-        <a href="#personality" css={linkStyles}>
-          Personality
-        </a>
-        <a href="#press" css={linkStyles}>
-          Press
-        </a>
-      </nav>
+        <a href="#director">Director</a>
+        <a href="#writer">Writer</a>
+        <a href="#personality">Personality</a>
+        <a href="#press">Press</a>
+      </Scrollspy>
       {/* below div used to add extra space to bottom of mobile nav (iPhone X design) */}
       <div
         css={css`
@@ -50,12 +54,6 @@ const MobileBottomNav = () => {
     </div>
   )
 }
-
-const linkStyles = css`
-  font-size: 11px;
-  color: white;
-  text-decoration: none;
-`
 
 export const phonePortrait = "320px"
 export const phoneLandscape = "480px"
